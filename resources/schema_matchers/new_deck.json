@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "success": true,
+            "deck_id": "sytezuwg1yga",
+            "remaining": 52,
+            "shuffled": false
+        }
+    ],
+    "required": [
+        "success",
+        "deck_id",
+        "remaining",
+        "shuffled"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "success": {
+            "$id": "#/properties/success",
+            "type": "boolean",
+            "title": "The success schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "deck_id": {
+            "$id": "#/properties/deck_id",
+            "type": "string",
+            "title": "The deck_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "sytezuwg1yga"
+            ]
+        },
+        "remaining": {
+            "$id": "#/properties/remaining",
+            "type": "integer",
+            "title": "The remaining schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 52,
+            "examples": [
+                52, 54
+            ]
+        },
+        "shuffled": {
+            "$id": "#/properties/shuffled",
+            "type": "boolean",
+            "title": "The shuffled schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        }
+    }
+}

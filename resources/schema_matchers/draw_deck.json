@@ -1,0 +1,222 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "success": true,
+            "deck_id": "6smsu198bogn",
+            "cards": [
+                {
+                    "code": "AS",
+                    "image": "https://deckofcardsapi.com/static/img/AS.png",
+                    "images": {
+                        "svg": "https://deckofcardsapi.com/static/img/AS.svg",
+                        "png": "https://deckofcardsapi.com/static/img/AS.png"
+                    },
+                    "value": "ACE",
+                    "suit": "SPADES"
+                },
+                {
+                    "code": "2S",
+                    "image": "https://deckofcardsapi.com/static/img/2S.png",
+                    "images": {
+                        "svg": "https://deckofcardsapi.com/static/img/2S.svg",
+                        "png": "https://deckofcardsapi.com/static/img/2S.png"
+                    },
+                    "value": "2",
+                    "suit": "SPADES"
+                }
+            ],
+            "remaining": 50
+        }
+    ],
+    "required": [
+        "success",
+        "deck_id",
+        "cards",
+        "remaining"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "success": {
+            "$id": "#/properties/success",
+            "type": "boolean",
+            "title": "The success schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "deck_id": {
+            "$id": "#/properties/deck_id",
+            "type": "string",
+            "title": "The deck_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "6smsu198bogn"
+            ]
+        },
+        "cards": {
+            "$id": "#/properties/cards",
+            "type": "array",
+            "title": "The cards schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "code": "AS",
+                        "image": "https://deckofcardsapi.com/static/img/AS.png",
+                        "images": {
+                            "svg": "https://deckofcardsapi.com/static/img/AS.svg",
+                            "png": "https://deckofcardsapi.com/static/img/AS.png"
+                        },
+                        "value": "ACE",
+                        "suit": "SPADES"
+                    },
+                    {
+                        "code": "2S",
+                        "image": "https://deckofcardsapi.com/static/img/2S.png",
+                        "images": {
+                            "svg": "https://deckofcardsapi.com/static/img/2S.svg",
+                            "png": "https://deckofcardsapi.com/static/img/2S.png"
+                        },
+                        "value": "2",
+                        "suit": "SPADES"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/cards/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "code": "AS",
+                                "image": "https://deckofcardsapi.com/static/img/AS.png",
+                                "images": {
+                                    "svg": "https://deckofcardsapi.com/static/img/AS.svg",
+                                    "png": "https://deckofcardsapi.com/static/img/AS.png"
+                                },
+                                "value": "ACE",
+                                "suit": "SPADES"
+                            }
+                        ],
+                        "required": [
+                            "code",
+                            "image",
+                            "images",
+                            "value",
+                            "suit"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "code": {
+                                "$id": "#/properties/cards/items/anyOf/0/properties/code",
+                                "type": "string",
+                                "title": "The code schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "AS"
+                                ]
+                            },
+                            "image": {
+                                "$id": "#/properties/cards/items/anyOf/0/properties/image",
+                                "type": "string",
+                                "title": "The image schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "https://deckofcardsapi.com/static/img/AS.png"
+                                ]
+                            },
+                            "images": {
+                                "$id": "#/properties/cards/items/anyOf/0/properties/images",
+                                "type": "object",
+                                "title": "The images schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "svg": "https://deckofcardsapi.com/static/img/AS.svg",
+                                        "png": "https://deckofcardsapi.com/static/img/AS.png"
+                                    }
+                                ],
+                                "required": [
+                                    "svg",
+                                    "png"
+                                ],
+                                "additionalProperties": true,
+                                "properties": {
+                                    "svg": {
+                                        "$id": "#/properties/cards/items/anyOf/0/properties/images/properties/svg",
+                                        "type": "string",
+                                        "title": "The svg schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "https://deckofcardsapi.com/static/img/AS.svg"
+                                        ]
+                                    },
+                                    "png": {
+                                        "$id": "#/properties/cards/items/anyOf/0/properties/images/properties/png",
+                                        "type": "string",
+                                        "title": "The png schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "https://deckofcardsapi.com/static/img/AS.png"
+                                        ]
+                                    }
+                                }
+                            },
+                            "value": {
+                                "$id": "#/properties/cards/items/anyOf/0/properties/value",
+                                "type": "string",
+                                "title": "The value schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "ACE"
+                                ]
+                            },
+                            "suit": {
+                                "$id": "#/properties/cards/items/anyOf/0/properties/suit",
+                                "type": "string",
+                                "title": "The suit schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "SPADES"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/cards/items"
+            }
+        },
+        "remaining": {
+            "$id": "#/properties/remaining",
+            "type": "integer",
+            "title": "The remaining schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                50
+            ]
+        }
+    }
+}
