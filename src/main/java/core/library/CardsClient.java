@@ -44,7 +44,7 @@ public class CardsClient {
    * @return Response restAssured response object
    */
 	public Response get(String URI, Map<String, String> parameters) {
-		return RestAssured.given().log().all().params(parameters).get(url+URI);
+		return RestAssured.given().params(parameters).get(url+URI);
 	}
 
    /**
