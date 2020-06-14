@@ -7,11 +7,11 @@ API validation on Deck Of Cards application http://deckofcardsapi.com/
 3. Preferably testNG plug-in configured on your IDE for execution.
 
 # Installation
-1. Close this repo to your local system.
+1. Clone this repo on to your local system.
 2. Open your IDE (like eclipse) and import the project as Maven -> Existing Maven Projects
     -- This is going to take little time to download missing artifacts and configure
     -- Make sure your IDE is using correct version of JDK (1.8)
-3. run testng.xml file at root directory.
+3. Run testng.xml file at root directory.
 
 # Structure of tests
 All the tests are located under package <b>core.tests</b> <br>
@@ -27,7 +27,6 @@ This helps in properly planning and asserting the response of a particular REST 
 We can also add a grouping feature here where a method will provide a set of assertions. This helps in future if we need to add a particular assertion to all tests.<br>
 
 ### Conclusion
-Given the time at hand, this is the best I could do and still there are lots of improvements that can be made.<br>
-My main goal in this sample project is to demostrate that tests should be independent of libraries we use. <br>
-Ex: If in future, I want to use a different library to make REST calls, I can update the CardsClient. Similarly, Assert library can be easily modified without any changes to test classes.<br>
+Goal in this sample project is to demostrate that tests should be independent of libraries we use. <br>
+Ex: If in future, I want to use a different library to make REST calls, we can update the CardsClient. Similarly, Assert library can be easily modified without any changes to test classes.<br>
 
